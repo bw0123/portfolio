@@ -205,9 +205,9 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
+  padding-top: 1rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #65717c;
   text-align: left;
   caption-side: bottom;
 }
@@ -361,24 +361,24 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h2, .h2 {
   color: #007965;     /* Set color of Experience, Projects, Skills*/
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h3, .h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 12rem;
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h6, .h6 {
@@ -436,19 +436,6 @@ mark,
 .list-unstyled {
   padding-left: 0;
   list-style: none;
-}
-
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline-item {
-  display: inline-block;
-}
-
-.list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
 }
 
 .initialism {
@@ -9774,6 +9761,7 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
+/* Last name green */
 .text-primary {
   color: #007965 !important;
 }
@@ -10009,8 +9997,9 @@ p.lead {
 .subheading {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5rem;
+  text-align: left;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -10080,8 +10069,9 @@ p.lead {
   background-color: #74c7b8;
 }
 
+
 .dev-icons {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 section.resume-section {
@@ -10118,7 +10108,7 @@ section.resume-section .resume-section-content {
   border: 0;
   background-color: white;
   padding: 12px;
-  border-radius: 40px;
+  border-radius: 50px;
   transition-duration: 0.3s;
   margin: 15px;
 }
@@ -10132,3 +10122,97 @@ section.resume-section .resume-section-content {
   transition: all 0.3 ease 0s;
 }
 
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  width: 450px;
+  height: 450px;
+  background: #161829a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #1d213a;
+  color: white;
+  padding: 20px;
+}
+
+.box .intro{
+  position: absolute;
+  top:  15px;
+  left: 15px;
+  right:  15px;
+  bottom: 15px;
+  border: 1px solid #e9a895;
+  padding:  20px;
+  text-align: left;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.box span:nth-child(1)
+{
+  transform:  rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:  rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+  transform:  rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+  transform:  rotate(270deg);
+}
+
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:  100%;
+  height: 2px;
+  background: #74c7b8;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+} 
